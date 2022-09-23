@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70dp"
+            app:cardElevation="@dimen/_2dp"
+            app:cardUseCompatPadding="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_30dp"
+                app:srcCompat="@drawable/ic_app_theme_back_arrow" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_scan_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans_regular"
+                android:gravity="center"
+                android:text="@string/scan_via_rfid"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_20" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80dp"
+            android:layout_below="@id/cv_top"
+            android:layout_marginStart="@dimen/_30dp"
+            android:layout_marginTop="@dimen/_30dp"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:background="@drawable/app_theme_color_background"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_client_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/neue_montreal_medium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Center for disabilities and develop"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_20" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_client_name"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/open_sans_regular"
+                android:gravity="center"
+                android:text="[#3Courtyard]"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/text_size_20" />
+
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_connectdevice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_scanner"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:fontFamily="@font/open_sans_medium"
+            android:gravity="center"
+            android:text="Connect to device"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_scanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_waiting_for_scan" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_waiting_for_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_scanner"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-30dp"
+            android:fontFamily="@font/open_sans_medium"
+            android:gravity="center"
+            android:text="Waiting For Scan"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rssiSubtitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_waiting_for_scan"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20dp"
+            android:fontFamily="@font/open_sans_medium"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20" />
+        <TextView
+            android:id="@+id/displaysomething"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:layout_below="@+id/rssiSubtitleTextView"/>
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/sessionSpinner"
+    android:id="@+id/lv_tagnumbers"
+    />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sessionSpinner"
+            android:layout_below="@+id/displaysomething"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
